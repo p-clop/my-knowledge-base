@@ -1,0 +1,161 @@
+﻿site_name: 我的知识库
+site_description: 个人知识管理与笔记系统
+site_author: 'zhovy'
+site_url: https://p-clop.github.io/my-knowledge-base
+
+repo_name: my-knowledge-base
+repo_url: https://github.com/p-clop/my-knowledge-base
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  language: zh
+  favicon: assets/images/favicon.svg
+  font:
+    text: Inter
+    code: JetBrains Mono
+  icon:
+    logo: material/book-open-variant
+    repo: fontawesome/brands/github
+
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - search.share
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - content.tooltips
+    - header.autohide
+    - announce.dismiss
+
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: apple-light
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-night
+        name: 切换深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: apple-dark
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/weather-sunny
+        name: 切换浅色模式
+
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      enabled: true
+      fallback_to_build_date: true
+      type: date
+      locale: zh
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - no-lightbox
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      cache_safe: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.tilde
+  - footnotes
+  - abbr
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.arithmatex:
+      generic: true
+  - toc:
+      permalink: true
+      permalink_title: 复制标题链接
+      toc_depth: 3
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+extra_javascript:
+  - assets/javascripts/extra.js
+  - assets/javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  tags:
+    JavaScript: javascript
+    Python: python
+    TypeScript: typescript
+    CSS: css
+    HTML: html
+    React: react
+    Vue: vue
+    Node: node
+    Docker: docker
+    Git: git
+    Linux: linux
+    macOS: macos
+    Windows: windows
+    教程: tutorial
+    笔记: note
+    项目: project
+    随笔: essay
+    阅读: reading
+    工具: tool
+    前端: frontend
+    后端: backend
+    数据库: database
+    算法: algorithm
+    设计: design
+    人工智能: ai
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/p-clop
+      name: GitHub
+    - icon: fontawesome/solid/envelope
+      link: mailto:<3071661187@qq.com>
+      name: 联系我
+
+copyright: Copyright &copy; 2024-2026
